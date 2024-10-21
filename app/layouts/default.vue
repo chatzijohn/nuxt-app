@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class=" min-h-dvh">
+  <div class="min-w-dvw w-dvw min-h-dvh">
     <BaseNavigation />
     <div class="">
       <slot />
