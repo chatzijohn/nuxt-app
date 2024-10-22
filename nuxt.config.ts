@@ -39,8 +39,26 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     config: {
+
+      content: [
+        `app/components/**/*.{vue,js}`,
+        `app/layouts/**/*.vue`,
+        'app/pages/**/*.vue',
+        'app/composables/**/*.{js,ts}',
+        `plugins/**/*.{js,ts}`,
+        `app/App.{js,ts,vue}`,
+        `app/app.{js,ts,vue}`
+      ],
+      darkMode: 'class',
+
+
       plugins: [require('tailwindcss-primeui')]
     },
+  },
+  colorMode: {
+    classSuffix: '',
+    preference: 'dark',
+    fallback: 'light'
   },
   primevue: {
     options: {
