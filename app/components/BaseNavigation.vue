@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const menu = [
-  { name: "About", path: "/about" },
+  { name: "About", path: "/" },
   { name: "Skills", path: "/skills" },
   { name: "Projects", path: "/projects" },
   { name: "Contact", path: "/contact" }
@@ -19,7 +19,7 @@ const menu = [
     <div class="flex flex-row items-center justify-center min-h-full w-full">
       <nav>
         <ul class="justify-between gap-4 items-center hidden md:inline-flex text-lg">
-          <li v-for="item in menu" v-bind:key="item.name">
+          <li v-for="item in menu" :key="item.name">
             <NuxtLink :to="item.path">
               <button
                 class="bg-transparent hover:text-white hover:bg-black transition-all duration-200 rounded-md p-2">{{
