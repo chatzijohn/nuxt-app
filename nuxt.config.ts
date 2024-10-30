@@ -43,6 +43,7 @@ export default defineNuxtConfig({
         extend: {
           colors: {
             background: 'hsl(var(--background))',
+            foreground: 'hsel(var(--foreground))',
             'icon-hover': 'hsl(var(--icon-hover))',
             icon: 'hsl(var(--icon))',
             primary: 'hsl(var(--primary))',

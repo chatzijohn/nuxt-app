@@ -54,10 +54,10 @@ const isOpen = ref(false)
       </button>
     </div>
   </div>
-  <div :class="isOpen ? 'block' : 'hidden'" class="flex items-center pl-2 w-full text-secondary translate-y-0 duration-200">
+  <div :class="isOpen ? 'block' : 'hidden'" class="flex items-center pl-2 w-full text-background bg-primary">
       <nav>
         <ul class="justify-between gap-4 items-center md:hidden text-lg">
-          <li v-for="item in menu" :key="item.name">
+          <li v-for="item in menu" :key="item.name" >
             <NuxtLink :to="item.path">
               <button class="button">{{ item.name }}</button>
             </NuxtLink>
