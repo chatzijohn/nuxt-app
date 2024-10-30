@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+    --icon: 289, 54%, 47%, 0.6;
+    --icon-hover: 289, 54%, 47%;
+
+    --background: 180 60% 3%;
+    --foreground: 279 56% 93%;
+
+    --input: 280 61% 80%;
+    --input-hover: 280 60% 75%;
+
+    --card: 282, 42%, 7%;
+    --card-foreground: 280 60% 95%;
+
+    --popover: 280 60% 3%;
+    --popover-foreground: 279 56% 93%;
+
+    --primary: 279 57% 79%;
+    --primary-foreground: 280 60% 3%;
+
+    --secondary: 279 57% 9%;
+    --secondary-foreground: 279 56% 9 3%;
+
+    --muted: 279 10% 50%;
+    --muted-foreground: 279 56% 93%;
+
+    --accent: 279 57% 49%;
+    --accent-foreground: 279 56% 93%;
+    --accent-hover: 279 57% 51%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 279 57% 10%;
+
+    --income: 168, 97%, 27%;
+    --expense: 324, 85%, 36%;
+    --saving: 217, 55%, 52%;
+
+    --border: 280 60% 60%;
+    --ring: 279 57% 60%;
+
+    --radius: 0.5rem;
+  }
+
+
+
+  .light {
+    --icon: 289, 54%, 47%, 1;
+    --icon-hover: 289, 54%, 37%;
+
+    --background: 280 20% 98%;
+    --foreground: 279 30% 10%;
+
+    --input: 280 18% 95%;
+    --input-hover: 280 20% 90%;
+
+    --card: 282, 12%, 98%;
+    --card-foreground: 280 15% 20%;
+
+    --popover: 280 18% 98%;
+    --popover-foreground: 279 30% 10%;
+
+    --primary: 279 57% 30%;
+    --primary-foreground: 280 60% 100%;
+
+    --secondary: 279 57% 90%;
+    --secondary-foreground: 279 56% 13%;
+
+    --muted: 279 10% 40%;
+    --muted-foreground: 279 56% 20%;
+
+    --accent: 279 57% 30%;
+    --accent-foreground: 279 56% 10%;
+    --accent-hover: 279 57% 27%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 279 57% 100%;
+
+    --income: 168, 65%, 35%;
+    --expense: 324, 55%, 40%;
+    --saving: 217, 45%, 40%;
+
+    --border: 280 10% 85%;
+    --ring: 279 57% 45%;
+
+    --radius: 0.5rem;
+}
+

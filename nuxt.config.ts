@@ -14,15 +14,15 @@ export default defineNuxtConfig({
     relativeWatchPaths: true,
     defaults: {
       useAsyncData: {
-        deep: true
-      }
-    }
+        deep: true,
+      },
+    },
   },
 
   unhead: {
     renderSSRHeadOptions: {
-      omitLineBreaks: false
-    }
+      omitLineBreaks: false,
+    },
   },
 
   devtools: { enabled: true },
@@ -37,9 +37,18 @@ export default defineNuxtConfig({
     '@primevue/nuxt-module',
   ],
   tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
+    cssPath: './assets/css/tailwind.css',
     config: {
-
+      theme: {
+        extend: {
+          colors: {
+            background: 'hsl(var(--background))',
+            'icon-hover': 'hsl(var(--icon-hover))',
+            icon: 'hsl(var(--icon))',
+            primary: 'hsl(var(--primary))',
+          },
+        },
+      },
       content: [
         `app/components/**/*.{vue,js}`,
         `app/layouts/**/*.vue`,
@@ -47,22 +56,22 @@ export default defineNuxtConfig({
         'app/composables/**/*.{js,ts}',
         `plugins/**/*.{js,ts}`,
         `app/App.{js,ts,vue}`,
-        `app/app.{js,ts,vue}`
+        `app/app.{js,ts,vue}`,
       ],
       darkMode: 'class',
 
-
-      plugins: [require('tailwindcss-primeui')]
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      plugins: [require('tailwindcss-primeui')],
     },
   },
   colorMode: {
     classSuffix: '',
     preference: 'dark',
-    fallback: 'light'
+    fallback: 'light',
   },
   primevue: {
     options: {
-      theme: 'none'
-    }
-  }
+      theme: 'none',
+    },
+  },
 })
