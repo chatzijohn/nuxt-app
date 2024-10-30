@@ -2,7 +2,7 @@
 
 </script>
 <template>
-  <div class="bg-background text-primary">
+  <div class="bg-background text-primary ">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

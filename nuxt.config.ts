@@ -46,6 +46,8 @@ export default defineNuxtConfig({
             'icon-hover': 'hsl(var(--icon-hover))',
             icon: 'hsl(var(--icon))',
             primary: 'hsl(var(--primary))',
+            secondary: 'hsl(var(--secondary))',
+            border: 'hsl(var(--border))',
           },
         },
       },

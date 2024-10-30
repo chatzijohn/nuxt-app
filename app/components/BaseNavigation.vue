@@ -9,6 +9,8 @@ type Theme = 'light' | 'dark'
 const setColorTheme = (newTheme: Theme) => {
   useColorMode().preference = newTheme
 }
+const isOpen = ref(false)
+
 </script>
 
 <template>
@@ -46,10 +48,21 @@ const setColorTheme = (newTheme: Theme) => {
         <Icon v-if="$colorMode.preference == 'light'" name="material-symbols:dark-mode" class="icon w-6 h-6" />
         <Icon v-else name="material-symbols:light-mode" class="icon w-6 h-6" />
       </button>
-
-      <button class="icon-button md:hidden">
-        <Icon name="material-symbols:menu" class="icon w-8 h-8" />
+      <button class="icon-button md:hidden" @click="isOpen=!isOpen">
+        <Icon v-if="isOpen === false" name="material-symbols:menu" class="icon w-8 h-8" />
+        <Icon v-if="isOpen" name="material-symbols:close" class="icon w-8 h-8" />
       </button>
     </div>
   </div>
+  <div :class="isOpen ? 'block' : 'hidden'" class="flex items-center pl-2 w-full text-secondary translate-y-0 duration-200">
+      <nav>
+        <ul class="justify-between gap-4 items-center md:hidden text-lg">
+          <li v-for="item in menu" :key="item.name">
+            <NuxtLink :to="item.path">
+              <button class="button">{{ item.name }}</button>
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
 </template>
