@@ -34,6 +34,11 @@ const isOpen = ref(false)
       </nav>
     </div>
     <div class="flex gap-1 w-full items-center justify-end">
+      <NuxtLink to="https://drive.google.com/file/d/1VdP71yXsVwq0WZXZQV75O5WY8S8H-l5_/view?usp=sharing">
+        <button class="icon-button">
+          <Icon name="material-symbols:apk-document-outline-rounded" class="icon w-8 h-8" />
+        </button>
+      </NuxtLink>
       <NuxtLink to="https://github.com/chatzijohn">
         <button class="icon-button">
           <Icon name="uil:github" class="icon w-8 h-8" />
@@ -48,21 +53,21 @@ const isOpen = ref(false)
         <Icon v-if="$colorMode.preference == 'light'" name="material-symbols:dark-mode" class="icon w-6 h-6" />
         <Icon v-else name="material-symbols:light-mode" class="icon w-6 h-6" />
       </button>
-      <button class="icon-button md:hidden" @click="isOpen=!isOpen">
+      <button class="icon-button md:hidden" @click="isOpen = !isOpen">
         <Icon v-if="isOpen === false" name="material-symbols:menu" class="icon w-8 h-8" />
         <Icon v-if="isOpen" name="material-symbols:close" class="icon w-8 h-8" />
       </button>
     </div>
   </div>
   <div :class="isOpen ? 'block' : 'hidden'" class="flex items-center pl-2 w-full text-background bg-primary">
-      <nav>
-        <ul class="justify-between gap-4 items-center md:hidden text-lg">
-          <li v-for="item in menu" :key="item.name" >
-            <NuxtLink :to="item.path">
-              <button class="button">{{ item.name }}</button>
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <ul class="justify-between gap-4 items-center md:hidden text-lg">
+        <li v-for="item in menu" :key="item.name">
+          <NuxtLink :to="item.path">
+            <button class="button">{{ item.name }}</button>
+          </NuxtLink>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
