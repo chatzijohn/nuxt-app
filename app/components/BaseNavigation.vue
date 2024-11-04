@@ -36,7 +36,7 @@ const isOpen = ref(false)
     <div class="flex gap-1 w-full items-center justify-end">
       <NuxtLink to="https://drive.google.com/file/d/1VdP71yXsVwq0WZXZQV75O5WY8S8H-l5_/view?usp=sharing">
         <button class="icon-button">
-          <Icon name="material-symbols:apk-document-outline-rounded" class="icon w-8 h-8" />
+          <Icon name="material-symbols:file-open-outline-rounded" class="icon w-8 h-8" />
         </button>
       </NuxtLink>
       <NuxtLink to="https://github.com/chatzijohn">
