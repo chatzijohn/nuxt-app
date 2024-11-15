@@ -14,7 +14,7 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <div class="flex flex-row items-center p-2 h-16">
+  <div class="flex flex-row items-center p-2 h-16 relative z-10 bg-background">
     <div class="flex flex-row w-full min-h-full items-center gap-2">
       <NuxtLink to="/">
         <h1 class="text-lg font-bold text-primary ">
@@ -59,7 +59,9 @@ const isOpen = ref(false)
       </button>
     </div>
   </div>
-  <div :class="isOpen ? 'block' : 'hidden'" class="flex items-center pl-2 w-full text-background bg-primary">
+  <!-- Sliding Navigation Menu -->
+  <div :class="isOpen ? 'translate-y-0' : '-translate-y-full'"
+    class="relative top-0 left-0 w-full bg-primary text-background transition-transform duration-500 ease-in-out z-0">
     <nav>
       <ul class="justify-between gap-4 items-center md:hidden text-lg">
         <li v-for="item in menu" :key="item.name">
